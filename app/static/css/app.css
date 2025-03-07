@@ -18,3 +18,22 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, min-content); /* Shrinks to fit images */
+    gap: 15px;   
+}
+
+
+.image-item > img{
+    height: 10em;
+    width: 10em;
+
+}

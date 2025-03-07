@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+{% include "flash_messages.html" %}
+<div class="flex-container">
+    <div class="grid-container">
+    
+        {% for filename in filenames %}
+        <div class="image-item">
+            <img src="{{url_for("get_image", filename=filename)}}">
+        </div>
+
+        {% endfor %}    
+    </div>
+</div>
+
+
+
+
+{% endblock main %}
