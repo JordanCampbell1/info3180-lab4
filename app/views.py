@@ -80,6 +80,7 @@ def upload():
 
 
 @app.route("/uploads/<filename>")
+@login_required
 def get_image(filename):
     upload_folder = os.path.join(os.getcwd(), app.config["UPLOAD_FOLDER"])
 
@@ -134,6 +135,7 @@ def login():
 
 
 @app.route("/logout")
+@login_required
 def logout():
     logout_user()
 
